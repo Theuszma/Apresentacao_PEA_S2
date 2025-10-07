@@ -155,12 +155,12 @@
                     </div>
                      <div class="bg-yellow-50 p-6 rounded-lg">
                         <h3 class="text-2xl font-bold text-yellow-800">Fator de Carga (Verão)</h3>
-                        <p class="text-4xl font-bold text-yellow-600">4,7%</p>
-                        <p class="text-sm text-gray-500">(Valor baixo, indica consumo concentrado em picos)</p>
+                        <p class="text-4xl font-bold text-yellow-600">32,3%</p>
+                        <p class="text-sm text-gray-500">(Valor moderado, mas com picos definidos)</p>
                     </div>
                 </div>
                 <div class="bg-gray-50 p-4 rounded-lg">
-                    <p class="text-center font-bold text-lg mb-2">Curva de Carga Diária Original</p>
+                    <p class="text-center font-bold text-lg mb-2">Curva de Carga Diária Original (Verão)</p>
                     <canvas id="chartEtapa1"></canvas>
                 </div>
             </div>
@@ -351,7 +351,7 @@
             <p class="text-xl text-gray-600 text-center mb-8">Analisando o impacto de eliminar o maior vilão da demanda máxima e do consumo elétrico.</p>
             <div class="grid grid-cols-2 gap-6 flex-grow">
                 <!-- Gráfico Curva de Carga -->
-                <div class="bg-gray-50 p-4 rounded-lg col-span-2">
+                <div class="bg-gray-50 p-4 rounded-lg col-span-2 relative h-64">
                     <canvas id="chartChuveiroGas"></canvas>
                 </div>
                 <!-- Análise Econômica -->
@@ -364,13 +364,14 @@
                     </ul>
                 </div>
                 <!-- Comparação Fator de Carga -->
-                <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-200">
+                <div class="bg-yellow-50 p-2 rounded-lg border-2 border-yellow-200 relative">
                      <canvas id="chartFatorCarga"></canvas>
                 </div>
-            </div>
+            <!--</div>
              <div class="mt-4 text-center bg-teal-100 p-3 rounded-lg border-l-4 border-teal-500">
-                <p class="text-lg text-teal-800">A troca reduz a demanda máxima em mais de 50% e melhora o Fator de Carga, oferecendo um retorno financeiro atrativo.</p>
+                <p class="text-lg text-teal-800">A troca reduz a demanda máxima em mais de 50% e mais do que dobra o Fator de Carga, oferecendo um retorno financeiro atrativo.</p>
             </div>
+        -->
         </div>
     </div>
 
@@ -459,7 +460,7 @@
     // --- GRÁFICOS ---
     const chartLabels = ['0h', '1h', '2h', '3h', '4h', '5h', '6h', '7h', '8h', '9h', '10h', '11h', '12h', '13h', '14h', '15h', '16h', '17h', '18h', '19h', '20h', '21h', '22h', '23h'];
     // Dados estimados a partir das curvas dos relatórios
-    const dataCurve1 = [1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 4.0, 1.8, 3.2, 3.2, 1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 7.4, 1.9, 1.8];
+    const dataCurve1 = [1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 2.0, 1.8, 1.8, 1.8, 1.8, 4.1, 1.8, 3.3, 3.3, 1.8, 1.6, 1.5, 1.5, 1.5, 1.5, 7.4, 1.9, 1.8];
     const dataCurve2 = [1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 3.8, 1.6, 3.0, 3.0, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 7.4, 1.7, 1.6];
     const dataCurve3 = [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 2.8, 2.8, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 3.0, 4.8, 3.0, 1.0, 0.5];
     
@@ -593,7 +594,14 @@
                 }
             ]
         },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Impacto na Curva de Carga Elétrica (Inverno)', font: {size: 16} } } }
+        options: { 
+            responsive: true, 
+            maintainAspectRatio: false, 
+            plugins: { 
+                title: { display: true, text: 'Impacto na Curva de Carga Elétrica (Inverno)', font: {size: 16} },
+                legend: { position: 'bottom', align: 'center' }
+            } 
+        }
     });
     
     // Gráfico Fator de Carga
@@ -604,13 +612,25 @@
             labels: ['Original', 'Com Gás'],
             datasets: [{
                 label: 'Fator de Carga (%)',
-                data: [3.2, 3.9],
+                data: [26.5, 54.9],
                 backgroundColor: ['rgba(239, 68, 68, 0.6)', 'rgba(59, 130, 246, 0.6)'],
                 borderColor: ['rgb(239, 68, 68)', 'rgb(59, 130, 246)'],
                 borderWidth: 1
             }]
         },
-        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: {display: false}, title: { display: true, text: 'Comparativo Fator de Carga (Inverno)', font: {size: 16} } } }
+        options: { 
+            responsive: true, 
+            maintainAspectRatio: false, 
+            plugins: { 
+                legend: {display: false}, 
+                title: { display: true, text: 'Comparativo Fator de Carga (Inverno)', font: {size: 16} } 
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
     });
 
 
