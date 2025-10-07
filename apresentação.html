@@ -88,18 +88,18 @@
         </div>
     </div>
 
-    <!-- SLIDE 2: Roteiro -->
+    <!-- SLIDE 2: Roteiro (ATUALIZADO) -->
     <div id="slide2" class="slide">
         <div class="slide-content">
             <h2 class="text-4xl font-bold text-teal-700 mb-8 text-center">Roteiro da Apresentação</h2>
             <div class="flex-grow flex items-center justify-center">
                 <ol class="list-decimal list-inside text-2xl space-y-5 text-gray-700">
                     <li>Introdução e Objetivos</li>
-                    <li>Diagnóstico Inicial (Etapa 1: Situação Original)</li>
+                    <li>Diagnóstico Inicial (Etapa 1)</li>
                     <li>Substituição de Equipamentos (Etapa 2)</li>
+                    <li>Gestão pelo Lado da Demanda - GLD (Etapa 3)</li>
                     <li>Análise Gráfica Comparativa</li>
                     <li>Análise de Viabilidade Econômica</li>
-                    <li>Gestão pelo Lado da Demanda - GLD (Etapa 3)</li>
                     <li>Análise da Fatura e Modalidades Tarifárias</li>
                     <li>Análise Adicional: Chuveiro a Gás</li>
                     <li>Conclusões Gerais</li>
@@ -217,10 +217,55 @@
         </div>
     </div>
 
-    <!-- NOVO SLIDE 7: Gráficos Comparativos -->
+    <!-- SLIDE 7: GLD -->
     <div id="slide7" class="slide">
         <div class="slide-content">
-            <h2 class="text-4xl font-bold text-teal-700 mb-4 text-center">4. Análise Gráfica Comparativa</h2>
+            <h2 class="text-4xl font-bold text-teal-700 mb-6">4. Gestão pelo Lado da Demanda (GLD) - Etapa 3</h2>
+            <p class="text-xl text-gray-600 text-center mb-8">Após a troca, focamos em <strong>como</strong> e <strong>quando</strong> a energia é usada. O objetivo do GLD é remodelar a curva de carga.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow items-center">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Ações de GLD Implementadas:</h3>
+                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-3">
+                        <li><strong>Deslocamento de Carga:</strong>
+                            <ul class="list-circle list-inside ml-4 text-base">
+                                <li>Chuveiro: Movido do horário de pico (21h) para 22h.</li>
+                                <li>Máquina de Lavar: Passou a ser usada pela manhã (10h-12h).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Eliminação de Desperdício:</strong>
+                             <ul class="list-circle list-inside ml-4 text-base">
+                                <li>Roteador e carregador de celular desligados durante a madrugada para evitar consumo em <em>standby</em>.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Resultados Finais (Etapa 3)</h3>
+                     <div class="space-y-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="text-xl font-bold text-blue-800">Demanda Máxima Pós-GLD</h4>
+                            <p class="text-4xl font-bold text-blue-600">4,8 kW</p>
+                            <p class="text-sm">(Redução de 35% do original)</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="text-xl font-bold text-green-800">Fator de Carga Pós-GLD</h4>
+                            <p class="text-4xl font-bold text-green-600">64,6%</p>
+                            <p class="text-sm">(Melhora significativa)</p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+             <div class="mt-6 text-center bg-green-100 p-4 rounded-lg border-l-4 border-green-500">
+                <p class="text-xl font-bold text-green-800">Conclusão do GLD:</p>
+                <p class="text-lg text-green-700">As ações foram fundamentais para <strong>reduzir o pico de demanda</strong> e <strong>melhorar o Fator de Carga</strong>, tornando o uso da energia mais eficiente e estável.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SLIDE 8: Análise Gráfica Comparativa -->
+    <div id="slide8" class="slide">
+        <div class="slide-content">
+            <h2 class="text-4xl font-bold text-teal-700 mb-4 text-center">5. Análise Gráfica Comparativa</h2>
             <div class="grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-4 flex-grow">
                 <div class="bg-gray-50 p-2 rounded-lg"><canvas id="chartConsumo"></canvas></div>
                 <div class="bg-gray-50 p-2 rounded-lg"><canvas id="chartDemanda"></canvas></div>
@@ -230,10 +275,10 @@
         </div>
     </div>
 
-    <!-- SLIDE 8: Análise de Viabilidade Econômica -->
-    <div id="slide8" class="slide">
+    <!-- SLIDE 9: Análise de Viabilidade Econômica -->
+    <div id="slide9" class="slide">
         <div class="slide-content">
-             <h2 class="text-4xl font-bold text-teal-700 mb-6">5. Análise de Viabilidade Econômica</h2>
+             <h2 class="text-4xl font-bold text-teal-700 mb-6">6. Análise de Viabilidade Econômica</h2>
             <p class="text-xl text-gray-600 text-center mb-8">A economia de energia justifica o investimento? Usamos indicadores como Payback e Custo da Energia Conservada (CEC).</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 flex-grow">
                 <div class="border-4 border-green-500 bg-green-50 p-6 rounded-lg text-center">
@@ -260,67 +305,9 @@
             </div>
         </div>
     </div>
-    
-    <!-- SLIDE 9: GLD -->
-    <div id="slide9" class="slide">
-        <div class="slide-content">
-            <h2 class="text-4xl font-bold text-teal-700 mb-6">6. Gestão pelo Lado da Demanda (GLD) - Etapa 3</h2>
-            <p class="text-xl text-gray-600 text-center mb-8">Após a troca, focamos em <strong>como</strong> e <strong>quando</strong> a energia é usada. O objetivo do GLD é remodelar a curva de carga.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow items-center">
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Ações de GLD Implementadas:</h3>
-                    <ul class="list-disc list-inside text-lg text-gray-700 space-y-3">
-                        <li><strong>Deslocamento de Carga:</strong>
-                            <ul class="list-circle list-inside ml-4 text-base">
-                                <li>Chuveiro: Movido do horário de pico (21h) para 22h.</li>
-                                <li>Máquina de Lavar: Passou a ser usada pela manhã (10h-12h).</li>
-                            </ul>
-                        </li>
-                        <li><strong>Eliminação de Desperdício:</strong>
-                             <ul class="list-circle list-inside ml-4 text-base">
-                                <li>Roteador e carregador de celular desligados durante a madrugada para evitar consumo em <em>standby</em>.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-48 w-48 mx-auto text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    <p class="text-lg font-semibold mt-4">O foco é achatar os picos e preencher os vales da curva de consumo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- SLIDE 10: Resultados Finais (era slide 9) -->
+        
+    <!-- SLIDE 10: Análise Tarifária -->
     <div id="slide10" class="slide">
-        <div class="slide-content">
-            <h2 class="text-4xl font-bold text-teal-700 mb-6">Resultados Finais: O Efeito Combinado (Etapa 3)</h2>
-            <p class="text-xl text-gray-600 text-center mb-6">As ações de GLD transformaram o perfil de consumo da residência.</p>
-            <div class="flex-grow w-full max-w-5xl mx-auto flex items-center justify-center">
-                <div class="grid grid-cols-2 gap-8 text-center">
-                    <div class="bg-blue-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold text-blue-800">Demanda Máxima Pós-GLD</h3>
-                        <p class="text-5xl font-bold text-blue-600">4,8 kW</p>
-                        <p class="text-sm">(Redução de 35% em relação ao original)</p>
-                    </div>
-                    <div class="bg-green-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold text-green-800">Fator de Carga Pós-GLD</h3>
-                        <p class="text-5xl font-bold text-green-600">64,6%</p>
-                        <p class="text-sm">(Melhora significativa na uniformidade do consumo)</p>
-                    </div>
-                </div>
-            </div>
-             <div class="mt-6 text-center bg-green-100 p-4 rounded-lg border-l-4 border-green-500">
-                <p class="text-xl font-bold text-green-800">Principal Conclusão:</p>
-                <p class="text-lg text-green-700">O GLD foi fundamental para <strong>reduzir o pico de demanda</strong> e <strong>melhorar o Fator de Carga</strong>, tornando o uso da energia mais eficiente e estável.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- SLIDE 11: Análise Tarifária -->
-    <div id="slide11" class="slide">
         <div class="slide-content">
             <h2 class="text-4xl font-bold text-teal-700 mb-6">7. Análise da Fatura e Modalidades Tarifárias</h2>
             <p class="text-xl text-gray-600 text-center mb-8">Com o novo perfil de consumo, qual tarifa é mais econômica?</p>
@@ -344,8 +331,8 @@
         </div>
     </div>
 
-    <!-- SLIDE 12: Análise Adicional - Chuveiro a Gás (ATUALIZADO COM GRÁFICOS) -->
-    <div id="slide12" class="slide">
+    <!-- SLIDE 11: Análise Adicional - Chuveiro a Gás -->
+    <div id="slide11" class="slide">
         <div class="slide-content">
             <h2 class="text-4xl font-bold text-teal-700 mb-6">8. Análise Adicional: Substituição por Chuveiro a Gás</h2>
             <p class="text-xl text-gray-600 text-center mb-8">Analisando o impacto de eliminar o maior vilão da demanda máxima e do consumo elétrico.</p>
@@ -355,7 +342,7 @@
                     <canvas id="chartChuveiroGas"></canvas>
                 </div>
                 <!-- Análise Econômica -->
-                <div class="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                <div class="bg-green-50 p-6 rounded-lg border-2 border-green-200 flex flex-col justify-center">
                      <h3 class="text-2xl font-bold text-green-800 mb-4 text-center">Análise da Troca</h3>
                      <ul class="list-disc list-inside text-lg text-gray-700 space-y-3">
                         <li><strong>Investimento Estimado:</strong> R$ 1.200,00</li>
@@ -367,33 +354,47 @@
                 <div class="bg-yellow-50 p-2 rounded-lg border-2 border-yellow-200 relative">
                      <canvas id="chartFatorCarga"></canvas>
                 </div>
-            <!--</div>
-             <div class="mt-4 text-center bg-teal-100 p-3 rounded-lg border-l-4 border-teal-500">
-                <p class="text-lg text-teal-800">A troca reduz a demanda máxima em mais de 50% e mais do que dobra o Fator de Carga, oferecendo um retorno financeiro atrativo.</p>
             </div>
-        -->
+             <!--<div class="mt-4 text-center bg-teal-100 p-3 rounded-lg border-l-4 border-teal-500">
+                <<p class="text-lg text-teal-800">A troca reduz a demanda máxima em mais de 50% e mais do que dobra o Fator de Carga, oferecendo um retorno financeiro atrativo.</p>
+             </div>-->
         </div>
     </div>
 
 
-    <!-- SLIDE 13: Conclusões -->
-    <div id="slide13" class="slide">
+    <!-- SLIDE 12: Conclusões -->
+    <div id="slide12" class="slide">
         <div class="slide-content">
             <h2 class="text-4xl font-bold text-teal-700 mb-8 text-center">9. Conclusões Gerais</h2>
             <div class="flex-grow flex items-center justify-center">
                  <ul class="list-none space-y-6 text-xl text-gray-800">
-                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-3 text-2xl">✔</span> A <strong>substituição de equipamentos</strong> é eficaz para reduzir o <strong>consumo total (kWh)</strong>.</li>
-                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-3 text-2xl">✔</span> A <strong>Gestão pelo Lado da Demanda (GLD)</strong> é fundamental para reduzir o <strong>pico de demanda (kW)</strong> e melhorar o Fator de Carga.</li>
-                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-3 text-2xl">✔</span> A <strong>análise econômica</strong> mostra que nem toda troca é viável a curto prazo, sendo crucial para a tomada de decisão.</li>
-                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-3 text-2xl">✔</span> A escolha da <strong>Tarifa Branca</strong>, alinhada às ações de GLD, gerou a maior economia financeira.</li>
-                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-3 text-2xl">✔</span> A <strong>combinação</strong> de todas as estratégias (equipamentos + hábitos + tarifa) gera o melhor resultado técnico e financeiro.</li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 font-bold mr-3 text-2xl flex-shrink-0">✔</span> 
+                        <p>A <strong>substituição de equipamentos</strong> é eficaz para reduzir o <strong>consumo total (kWh)</strong>.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 font-bold mr-3 text-2xl flex-shrink-0">✔</span>
+                        <p>A <strong>Gestão pelo Lado da Demanda (GLD)</strong> é fundamental para reduzir o <strong>pico de demanda (kW)</strong> e melhorar o Fator de Carga.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 font-bold mr-3 text-2xl flex-shrink-0">✔</span>
+                        <p>A <strong>análise econômica</strong> mostra que nem toda troca é viável a curto prazo.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 font-bold mr-3 text-2xl flex-shrink-0">✔</span>
+                        <p>A escolha da <strong>Tarifa Branca</strong>, alinhada às ações de GLD, gerou a maior economia financeira.</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-teal-500 font-bold mr-3 text-2xl flex-shrink-0">✔</span>
+                        <p>A <strong>combinação</strong> de todas as estratégias gera o melhor resultado técnico e financeiro.</p>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
     
-    <!-- SLIDE 14: Fim -->
-    <div id="slide14" class="slide bg-teal-600 text-white">
+    <!-- SLIDE 13: Fim -->
+    <div id="slide13" class="slide bg-teal-600 text-white">
         <div class="text-center">
             <h1 class="text-6xl font-bold mb-6">Obrigado!</h1>
             <p class="text-3xl">Perguntas?</p>
@@ -459,15 +460,11 @@
 
     // --- GRÁFICOS ---
     const chartLabels = ['0h', '1h', '2h', '3h', '4h', '5h', '6h', '7h', '8h', '9h', '10h', '11h', '12h', '13h', '14h', '15h', '16h', '17h', '18h', '19h', '20h', '21h', '22h', '23h'];
-    // Dados estimados a partir das curvas dos relatórios
     const dataCurve1 = [1.8, 1.8, 1.8, 1.8, 1.8, 1.8, 2.0, 1.8, 1.8, 1.8, 1.8, 4.1, 1.8, 3.3, 3.3, 1.8, 1.6, 1.5, 1.5, 1.5, 1.5, 7.4, 1.9, 1.8];
     const dataCurve2 = [1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 3.8, 1.6, 3.0, 3.0, 1.6, 1.6, 1.6, 1.6, 1.6, 1.6, 7.4, 1.7, 1.6];
     const dataCurve3 = [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 2.8, 2.8, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 3.0, 4.8, 3.0, 1.0, 0.5];
-    
-    // Dados para Curva de Carga Inverno (Chuveiro a Gás)
     const dataCurveInvernoOriginal = [1.6, 1.6, 1.6, 1.6, 1.6, 1.9, 1.6, 1.6, 1.6, 1.6, 1.6, 4.0, 1.6, 3.2, 3.2, 1.6, 1.6, 1.6, 1.6, 1.6, 4.0, 8.7, 1.7, 1.7];
     const dataCurveInvernoGas =      [1.6, 1.6, 1.6, 1.6, 1.6, 1.9, 1.6, 1.6, 1.6, 1.6, 1.6, 4.0, 1.6, 3.2, 3.2, 1.6, 1.6, 1.6, 1.6, 1.6, 4.0, 1.7, 1.7, 1.7];
-
 
     // Gráfico Slide 4: Curva de Carga Original
     const chartEtapa1Ctx = document.getElementById('chartEtapa1').getContext('2d');
@@ -486,16 +483,13 @@
         options: { responsive: true, plugins: { legend: { display: false } } } 
     });
 
-    // --- GRÁFICOS DO SLIDE 7 ---
-
-    // Gráfico de Consumo Mensal
+    // --- GRÁFICOS DO SLIDE 8 (Análise Gráfica) ---
     const chartConsumoCtx = document.getElementById('chartConsumo').getContext('2d');
     new Chart(chartConsumoCtx, {
         type: 'bar',
         data: {
             labels: ['Original', 'Pós-Troca'],
             datasets: [{
-                label: 'Consumo Mensal (kWh)',
                 data: [252.29, 237.15],
                 backgroundColor: ['rgba(239, 68, 68, 0.6)', 'rgba(59, 130, 246, 0.6)'],
                 borderColor: ['rgb(239, 68, 68)', 'rgb(59, 130, 246)'],
@@ -504,16 +498,13 @@
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: {display: false}, title: { display: true, text: 'Consumo Mensal (kWh) - Verão' } } }
     });
-
-    // Gráfico de Demanda Máxima
     const chartDemandaCtx = document.getElementById('chartDemanda').getContext('2d');
     new Chart(chartDemandaCtx, {
         type: 'bar',
         data: {
             labels: ['Original', 'Pós-Troca', 'Pós-GLD'],
             datasets: [{
-                label: 'Demanda Máxima (kW)',
-                data: [7.4, 7.4, 4.8], // Usando dados da Tabela 3 e Tabela 10
+                data: [7.4, 7.4, 4.8],
                 backgroundColor: ['rgba(239, 68, 68, 0.6)', 'rgba(59, 130, 246, 0.6)', 'rgba(22, 163, 74, 0.6)'],
                 borderColor: ['rgb(239, 68, 68)', 'rgb(59, 130, 246)', 'rgb(22, 163, 74)'],
                 borderWidth: 1
@@ -521,8 +512,6 @@
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { legend: {display: false}, title: { display: true, text: 'Demanda Máxima (kW)' } } }
     });
-
-    // Gráfico Curva de Carga: Substituição
     const chartCurvaSubstituicaoCtx = document.getElementById('chartCurvaSubstituicao').getContext('2d');
     new Chart(chartCurvaSubstituicaoCtx, {
         type: 'line',
@@ -545,8 +534,6 @@
         },
         options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Curva de Carga: Efeito da Substituição' } } }
     });
-
-    // Gráfico Curva de Carga: GLD
     const chartCurvaGLDCtx = document.getElementById('chartCurvaGLD').getContext('2d');
     new Chart(chartCurvaGLDCtx, {
         type: 'line',
@@ -570,8 +557,7 @@
         options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Curva de Carga: Efeito do GLD' } } }
     });
     
-    // --- GRÁFICOS DO SLIDE 12 ---
-    // Gráfico Curva de Carga: Chuveiro a Gás
+    // --- GRÁFICOS DO SLIDE 11 (CHUVEIRO A GÁS) ---
     const chartChuveiroGasCtx = document.getElementById('chartChuveiroGas').getContext('2d');
     new Chart(chartChuveiroGasCtx, {
         type: 'line',
@@ -604,14 +590,12 @@
         }
     });
     
-    // Gráfico Fator de Carga
     const chartFatorCargaCtx = document.getElementById('chartFatorCarga').getContext('2d');
     new Chart(chartFatorCargaCtx, {
         type: 'bar',
         data: {
             labels: ['Original', 'Com Gás'],
             datasets: [{
-                label: 'Fator de Carga (%)',
                 data: [26.5, 54.9],
                 backgroundColor: ['rgba(239, 68, 68, 0.6)', 'rgba(59, 130, 246, 0.6)'],
                 borderColor: ['rgb(239, 68, 68)', 'rgb(59, 130, 246)'],
@@ -625,14 +609,9 @@
                 legend: {display: false}, 
                 title: { display: true, text: 'Comparativo Fator de Carga (Inverno)', font: {size: 16} } 
             },
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+            scales: { y: { beginAtZero: true } }
         }
     });
-
 
     // Initialize first slide
     showSlide(currentSlide);
